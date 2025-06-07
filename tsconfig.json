@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                       // Use modern JS features
+    "module": "commonjs",                     // Node-style modules
+    "lib": ["ESNext"],                        // No DOM typings to avoid AbortSignal conflict
+    "types": ["node", "playwright"],          // Only use Node and Playwright types
+    "moduleResolution": "node",               // Standard Node.js module resolution
+    "strict": true,                           // Enable all strict type checks
+    "esModuleInterop": true,                  // Allow default imports from CommonJS
+    "outDir": "./dist",                       // Output directory for compiled JS files
+    "skipLibCheck": true                      // Avoid .d.ts conflicts like AbortSignal
+  },
+  "include": ["./tests"],                     // Include test files
+  "exclude": ["node_modules", "dist"]         // Ignore these folders
+}
